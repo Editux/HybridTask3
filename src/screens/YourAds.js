@@ -22,7 +22,7 @@ const AddPostScreen = ({ navigation }) => {
     // e.preventDefault();
     dispatch(postAd(title, details, price));
     // dispatch(actionGoesHere(title, details, price, userName));
-    console.log(title, details, price);
+  
     navigation.navigate("Home");
     setTitle("");
     setDetails("");

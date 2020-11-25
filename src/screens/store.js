@@ -7,6 +7,7 @@ const reducer = combineReducers({
 });
 
 const initialState = {
+  
 };
 
 const middleware = [thunk];
