@@ -10,7 +10,7 @@ import {
 import { postAd } from "./adActions";
 import { connect } from "react-redux";
 
-const AddPostScreen = ({ navigation }) => {
+const CreateAds = ({ navigation }) => {
   const [title, setTitle] = useState("");
   const [details, setDetails] = useState("");
   const [price, setPrice] = useState("");
@@ -23,7 +23,7 @@ const AddPostScreen = ({ navigation }) => {
     dispatch(postAd(title, details, price));
     // dispatch(actionGoesHere(title, details, price, userName));
   
-    navigation.navigate("Home");
+    
     setTitle("");
     setDetails("");
     setPrice("");
@@ -31,6 +31,7 @@ const AddPostScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.text_style}> Create Your Ad Post</Text>
       <View style={styles.inputWrapper}>
         <TextInput
           style={styles.input}
@@ -62,8 +63,8 @@ const AddPostScreen = ({ navigation }) => {
   );
 };
 
-export default AddPostScreen;
-// export default connect(null, { postAd })(AddPostScreen);
+export default CreateAds;
+
 
 const styles = StyleSheet.create({
   container: {
@@ -83,11 +84,11 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     padding: 5,
     borderRadius: 10,
-    borderColor: "#667EEA",
+    borderColor: "red",
     color: "black",
   },
   addButton: {
-    backgroundColor: "#667EEA",
+    backgroundColor: "red",
     width: "100%",
     height: 30,
     justifyContent: "center",
@@ -102,5 +103,10 @@ const styles = StyleSheet.create({
     textAlignVertical: "center",
     color: "#fff",
   },
+  text_style : {
+    marginBottom: 50,
+    fontSize: 30,
+    fontWeight : '700',
+  }
 });
 

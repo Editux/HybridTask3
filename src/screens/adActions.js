@@ -22,9 +22,20 @@ export const postAd = (title, details, price) => {
 
   
 }
-export const deleteAd = (title) => {
+export const deleteAd = (key) => {
   return(dispatch)=>{
-    firebase.database().ref('/ads/' + title).remove();
+    firebase.database().ref('/ads/'+key).remove();
    
   }
+}
+  export const updateAd = (key, adtitle,addetails,adprice) => {
+    return(dispatch)=>{
+      firebase.database().ref('/ads/'+key).update( {
+        title: adtitle,
+        details: addetails,
+        price:adprice,
+
+      })
+     
+    }
 }
