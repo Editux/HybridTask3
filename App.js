@@ -7,7 +7,6 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import HomeScreen from './src/screens/HomeScreen';
 import Ads from './src/screens/Ads';
-import LoginScreen from './src/screens/LoginScreen';
 import CreateAds from './src/screens/CreateAds';
 import EditScreen from './src/screens/EditScreen';
 
@@ -22,7 +21,7 @@ export default function App() {
     <Drawer.Navigator initialRouteName="Home"
   
      >
-       <Drawer.Screen name="Login" component ={LoginScreen}/>
+       
       <Drawer.Screen name="Home" component={HomeScreen} />
       <Drawer.Screen name="Ads" component={Ads} />
       <Drawer.Screen name="Add Post" component= {CreateAds} />
